@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Leaflet マップのスタイル調整 */
+.leaflet-container {
+  height: 100% !important;
+  width: 100% !important;
+  min-height: 320px !important;
+}
+
+.leaflet-control-container {
+  z-index: 1000;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 8px;
+}
+
+.leaflet-popup-content {
+  margin: 8px 12px;
+  font-size: 14px;
+}
+
+/* 高貴なるローディングアニメーション */
+@keyframes noble-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.noble-spinner {
+  animation: noble-spin 2s linear infinite;
+}
+
+/* ルート矢印のスタイル */
+.route-arrow {
+  background: transparent !important;
+  border: none !important;
+  font-size: 20px;
+  text-align: center;
+  line-height: 20px;
+} 
